@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  {% load staticfiles %}
+  {% load static %}
+body {
+  background-image: url("{% static "2.jpg" %}");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+div {
+  width: 300px;
+  padding: 50px 150px 50px 150px;
+  margin: 20px;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+table, th, td {
+  text-align: left; 	
+}
+img {
+  float: none;
+  border-radius: 50%;
+}
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a href="{% url 'main:contact' %}">CONTACT</a></li>
+  <li><a href="{% url 'main:portfolio' %}">PORTFOLIO</a></li>
+  <li><a href="{% url 'main:registration' %}">REGISTRATION</a></li>
+  <li><a href="{% url 'main:workshop' %}">WORKSHOP</a></li>
+  <li><a href="{% url 'main:homepage' %}">HOME</a></li>
+</ul>
+<p><img src="{% static 'kushal.jpeg' %}" width="350" height="262.5">
+<center>
+<div>
+<table>
+<tr>
+<th colspan="2"><h2><center>Contact Info<center></h2></th>
+</tr>
+<tr>
+<th><strong>Phone:</strong></th><th><center>+91 9900 62 3355</center></th><tr><th><strong>Email:</strong></th><th><center>kushalkp88@gmail.com</center></th> <tr><th><strong>Address:</strong></th>
+<th><center>Ramamurthy Nagar,Bangalore,</center><center>Karnataka-560016.</center></th></table>
+</div></center>
+</body>
+</html>

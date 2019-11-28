@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {% load staticfiles %}
+  {% load static %}
+<style>
+
+body {
+  background-image: url("{% static "2.jpg" %}");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-attachment: fixed;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+div {
+  width: 300px;
+  border: 15px solid white;
+  padding: 50px 150px 50px 150px;
+  margin: 20px;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+img {
+  border: 0px;
+  margin: 0px;
+  padding:0px;
+  display: block;
+}
+h1 {
+  background-color: black;
+  width: 800px;
+  margin: 0px 0px 75px 0px;
+}
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a href="{% url 'main:contact' %}">CONTACT</a></li>
+  <li><a href="{% url 'main:portfolio' %}">PORTFOLIO</a></li>
+  <li><a href="{% url 'main:registration' %}">REGISTRATION</a></li>
+  <li><a href="{% url 'main:workshop' %}">WORKSHOP</a></li>
+  <li><a href="{% url 'main:homepage' %}">HOME</a></li>
+</ul>
+<center>
+
+<img src="{% static 'w1.png' %}" width="800">
+<img src="{% static 'w2.png' %}" width="800">
+<img src="{% static 'w3.png' %}" width="800">
+<img src="{% static 'w4.png' %}" width="800">
+<img src="{% static 'w5.png' %}" width="800">
+<img src="{% static 'w6.png' %}" width="800">
+<h1><br><br><a href="{% url 'main:registration' %}">Register Now</a><br><br><br></h1>
+</center>
+</body>
+</html>

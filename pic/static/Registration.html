@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Page</title>
+</head>
+<style>
+body {
+  background-image: url("2.jpg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-attachment: fixed;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+
+</style>
+</head>
+<body>
+<ul>
+  <li><a href="Contact.html">CONTACT</a></li>
+  <li><a href="Portfolio.html">PORTFOLIO</a></li>
+  <li><a href="Registration.html">REGISTRATION</a></li>
+  <li><a href="Workshop.html">WORKSHOP</a></li>
+  <li><a href="Home.html">HOME</a></li>
+</ul>
+<br><br>
+<H1>REGISTRATION FORM</H1>
+<br><br>
+<form action="main/submit/" >
+  First name: 
+  <input type="text" name="firstname" >
+  <br><br>
+  Last name:
+  <input type="text" name="lastname" >
+  <br><br>
+  <input type="radio" name="gender" value="male" > Male
+  <input type="radio" name="gender" value="female"> Female
+  <input type="radio" name="gender" value="other"> Other  <br>
+  <p>Select the Courses
+  <select name="courses">
+    <option value="Basic">Basic</option>
+    <option value="Most Prefered">Most Prefered</option>
+    <option value="Professional">Professional</option>
+    <option value="Competitive">Competitive</option>
+  </select>
+  <br>
+  <p>Age:</p>
+  <input type="range" name="points" min="18" max="50" value="18" id="id1"  >
+<span id="f" style="font-weight:bold;color:white">18</span>
+<script>
+var slideCol = document.getElementById("id1");
+
+var y = document.getElementById("f");
+y.innerHTML = slideCol.value;
+
+slideCol.oninput = function() {
+    y.innerHTML = this.value;
+}
+
+</script>
+<br><br>
+Telephone: <br>
+<input type="tel" name="phone" >
+<br><br>
+Email ID:<br>
+
+<input type="email" >
+<br><br>
+<input type="submit" value="Submit">
+
+</form>
+
+
+
+
+</body>
+</html>

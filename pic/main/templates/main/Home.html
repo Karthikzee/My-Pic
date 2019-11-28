@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+{% load staticfiles %}
+{% load static %}
+<style>
+
+body {
+  background-image: url("{% static "2.jpg" %}");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-color: black;
+  color: white;
+  text-align: center;
+  margin:0;
+  height:100%;
+  overflow: hidden;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+@keyframes slidy {
+0% { left: 0%; }
+20% { left: 0%; }
+25% { left: -100%; }
+45% { left: -100%; }
+50% { left: -200%; }
+70% { left: -200%; }
+75% { left: -300%; }
+95% { left: -300%; }
+100% { left: -400%; }
+}
+body { margin: 0; }
+div#slider { overflow: hidden; }
+div#slider figure img { width: 25%; float: left;}
+div#slider figure {
+  position: relative;
+  width: 400%;
+  margin: 0;
+  left: 0;
+  text-align: left;
+  font-size: 0;
+  animation: 30s slidy infinite;
+
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a href="{% url 'main:contact' %}">CONTACT</a></li>
+  <li><a href="{% url 'main:portfolio' %}">PORTFOLIO</a></li>
+  <li><a href="{% url 'main:registration' %}">REGISTRATION</a></li>
+  <li><a href="{% url 'main:workshop' %}">WORKSHOP</a></li>
+  <li><a href="{% url 'main:homepage' %}">HOME</a></li>
+</ul>
+
+<div id="slider">
+<figure>
+<img src="{% static 'Picture1.jpg' %}" width="450" height="600">
+<img src="{% static 'Picture2.jpg' %}" width="450" height="600">
+<img src="{% static 'Picture3.jpg' %}" width="450" height="600">
+<img src="{% static 'Picture4.jpg' %}" width="450" height="600">
+<img src="{% static 'Picture5.jpg' %}" width="450" height="600">
+</figure>
+</div>
+
+</body>
+</html>
