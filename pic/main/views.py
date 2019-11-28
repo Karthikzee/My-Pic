@@ -29,14 +29,20 @@ def contact(request):
 				 )
 
 
+
 def submit(request):
-    firstname=request.POST['firstname']
+    contents = ["firstname", "lastname", "gender", "courses", "points", "phone", "email"]
+    text = "Registration for\n"
+    for i in contents:
+        text += i +": "+ str(request.POST[i])
     s = smtplib.SMTP('smtp.gmail.com', 587)
     s.starttls()
     sender = 'karthikzee0@gmail.com'
     reciever = 'karthik.18bcs@cmr.edu.in'
-    message = firstname
+    message = text
     password = ""
     s.login(sender, password)
     s.sendmail(sender, reciever, message)
-    return HttpResponseRedirect('/')
+    return render(request=request,
+				  template_name="main/thanks.html"
+				 )
