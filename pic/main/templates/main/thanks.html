@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Thanks for Registering</title>
+	<style type="text/css">
+		.middleDiv {
+    position : absolute;    
+    width    : 200px;
+    height   : 200px;
+    left     : 50%;
+    top      : 30%;
+    margin-left : -100px; /* half of the width  */
+    margin-top  : -100px; /* half of the height */
+    font-family:Georgia;
+    overflow: hidden;
+    text-align: center;
+}
+	</style>
+</head>
+<body>
+<div class="middleDiv">
+	<h1 style="color:green;">Thanks for registering! :)</h1>
+	<h3>back to <a style="color: white; background-color: blue;border-radius: 20px; padding: 3px;" href="{% url 'main:homepage' %}">Homepage</a></h3>
+</div>
+
+</body>
+</html>
