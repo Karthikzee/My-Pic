@@ -37,10 +37,10 @@ def submit(request):
         text += i +": "+ str(request.POST[i])
     s = smtplib.SMTP('smtp.gmail.com', 587)
     s.starttls()
-    sender = 'karthikzee0@gmail.com'
-    reciever = 'karthik.18bcs@cmr.edu.in'
+    sender = 'karthikzee0@gmail.com' #add sender email id here inside quotes
+    reciever = 'karthik.18bcs@cmr.edu.in' #add reciever email id here inside quotes
     message = text
-    password = ""
+    password = "" #add sender password inside quotes, this is not at all recommended. But thing works so why fix it :)
     s.login(sender, password)
     s.sendmail(sender, reciever, message)
     return render(request=request,
