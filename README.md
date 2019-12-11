@@ -5,7 +5,7 @@ pip install Django==2.2.8 for windows
 or
 pip3 install Django==2.2.8 for linux
 
-Don't forget to add email data in pic/main/views.py
+Don't forget to add email data in pic/pic/main/views.py
 
 Kushal WD final project.
 Apun ne backend kiya. compiled_life
